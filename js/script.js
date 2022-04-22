@@ -26,7 +26,7 @@ function updateSliderValue(valueFromSlider) {
  * This function displays the slider value.
  */
 
-  function myButtonClicked() {
-  document.getElementById("random-number").innerHTML = 
+function myButtonClicked() {
+  document.getElementById("random-number").innerHTML =
     Math.floor(Math.random() * 6) + 1
-  }
+}
