@@ -10,10 +10,12 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
+  navigator.serviceWorker.register("/ICS2O-Unit-5-01/sw.js", {
+    scope: "/ICS2O-Unit-5-01/",
   })
 }
+
+const randomNumber = Math.floor(Math.random() * 6) + 1
 
 /**
  * This function updates the slider value.
@@ -23,10 +25,19 @@ function updateSliderValue(valueFromSlider) {
 }
 
 /**
- * This function displays the slider value.
+ * This function compares slider with random number.
  */
-
 function myButtonClicked() {
-  document.getElementById("random-number").innerHTML =
-    Math.floor(Math.random() * 6) + 1
+  const sliderValue = slider.value
+
+  // process
+  if (sliderValue == randomNumber) {
+    document.getElementById('answer').innerHTML = 'Answer is ' + randomNumber +'!' +  ' Congratulations!'
+   // console.log("Congratulations!")
+  }
+  //  block of code to be executed if condition1 is true
+  if (sliderValue != randomNumber) {
+    document.getElementById('answer').innerHTML = 'Answer is ' + randomNumber +'!' +  ' Try again!'
+   // console.log("Try again!")
+  }
 }

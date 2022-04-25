@@ -10,12 +10,12 @@
     <meta name="theme-color" content="#FFFFFF" />
     <title>GitHub page as PWA template</title>
     <link rel="canonical" href="https://mr-coxall.github.io/ICS2O-PWA-Test/" />
-    <link rel="manifest" href="/ICS2O-PWA-Test/manifest.webmanifest" />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="manifest" href="/ICS2O-Unit-5-01/manifest.webmanifest" />
+    <link rel="stylesheet" href="./css/style.css" />
     <!-- None blocking for Lighthouse report -->
     <!-- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></noscript>
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-purple.min.css"></noscript>
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-blue.min.css" media="none" onload="if(media!='all')media='all'"><noscript><link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-purple.min.css"></noscript>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -32,14 +32,14 @@
       </header>
       <main class="mdl-layout__content">
         <p></p>
-        <img src="./images/notebook-animation.svg" alt="Computer" width="25%" height="25%">
+        <img src="./image/2-Dice-Icon.svg" alt="Dice" width="15%" height="60%">
         <p></p>
         <div id="slider-value">
           ?
         </div>  
         <!-- Slider with Starting Value -->
         <label>
-          Slider's Value
+          Guess the number.
           <input id = "slider" class="mdl-slider mdl-js-slider" type="range"
           min="1" max="6" value="2" tabindex="0"
           onchange = "updateSliderValue(this.value)">
@@ -47,13 +47,11 @@
         <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
-        >
+          onclick="myButtonClicked()">
           Show Value
         </button>
         <!-- basic text -->
-        <p></p>
-        <div id="random-number"></div>
+        <div id="answer"></div>
       </main>
     </div>
   </body>
