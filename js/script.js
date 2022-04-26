@@ -32,8 +32,7 @@ function myButtonClicked() {
 
   // process
   if (sliderValue == randomNumber) {
-    document.getElementById("answer").innerHTML =
-      " Congratulations!"
+    document.getElementById("answer").innerHTML = " Congratulations!"
     // console.log("Congratulations!")
   }
   //  block of code to be executed if condition1 is true
